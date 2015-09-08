@@ -34,9 +34,9 @@
             this.tb_picByteData = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_PicToByte = new System.Windows.Forms.TabPage();
-            this.tab_byteToPic = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_openDialog = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tab_byteToPic = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tab_PicToByte.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +44,8 @@
             // openPicDialog
             // 
             this.openPicDialog.FileName = "openPicDialog";
+            this.openPicDialog.Filter = "(*.jpg,*.png,*.jpeg,*.bmp,*.gif)|*.jpg;*.png;*.jpeg;*.bmp;*.gif|All files(*.*)|*." +
+    "*";
             this.openPicDialog.Multiselect = true;
             // 
             // btn_picConvertToByte
@@ -100,15 +102,15 @@
             this.tab_PicToByte.Text = "图片转换";
             this.tab_PicToByte.UseVisualStyleBackColor = true;
             // 
-            // tab_byteToPic
+            // btn_openDialog
             // 
-            this.tab_byteToPic.Location = new System.Drawing.Point(4, 22);
-            this.tab_byteToPic.Name = "tab_byteToPic";
-            this.tab_byteToPic.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_byteToPic.Size = new System.Drawing.Size(473, 509);
-            this.tab_byteToPic.TabIndex = 1;
-            this.tab_byteToPic.Text = "图片浏览";
-            this.tab_byteToPic.UseVisualStyleBackColor = true;
+            this.btn_openDialog.Location = new System.Drawing.Point(390, 3);
+            this.btn_openDialog.Name = "btn_openDialog";
+            this.btn_openDialog.Size = new System.Drawing.Size(75, 23);
+            this.btn_openDialog.TabIndex = 4;
+            this.btn_openDialog.Text = "浏览";
+            this.btn_openDialog.UseVisualStyleBackColor = true;
+            this.btn_openDialog.Click += new System.EventHandler(this.btn_openDialog_Click);
             // 
             // label1
             // 
@@ -119,15 +121,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "请选择上转换的图片：";
             // 
-            // btn_openDialog
+            // tab_byteToPic
             // 
-            this.btn_openDialog.Location = new System.Drawing.Point(390, 3);
-            this.btn_openDialog.Name = "btn_openDialog";
-            this.btn_openDialog.Size = new System.Drawing.Size(75, 23);
-            this.btn_openDialog.TabIndex = 4;
-            this.btn_openDialog.Text = "浏览";
-            this.btn_openDialog.UseVisualStyleBackColor = true;
-            this.btn_openDialog.Click += new System.EventHandler(this.btn_openDialog_Click);
+            this.tab_byteToPic.Location = new System.Drawing.Point(4, 22);
+            this.tab_byteToPic.Name = "tab_byteToPic";
+            this.tab_byteToPic.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_byteToPic.Size = new System.Drawing.Size(473, 509);
+            this.tab_byteToPic.TabIndex = 1;
+            this.tab_byteToPic.Text = "图片浏览";
+            this.tab_byteToPic.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
